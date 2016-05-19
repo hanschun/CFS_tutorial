@@ -4,7 +4,8 @@
   "description": "Code For Sacramento tutorial for getting and manipulating civic data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,9 @@
   "bugs": {
     "url": "https://github.com/hanschun/CFS_tutorial/issues"
   },
-  "homepage": "https://github.com/hanschun/CFS_tutorial#readme"
+  "homepage": "https://github.com/hanschun/CFS_tutorial#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "superagent": "^2.0.0-alpha.3"
+  }
 }

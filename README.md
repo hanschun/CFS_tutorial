@@ -14,3 +14,21 @@ This will also install **npm**, the Node package manager, which is recommended f
 Once you have installed Node, you can use npm to install the popular AJAX package [Superagent](https://github.com/visionmedia/superagent).
 
 **AJAX** is Asynchronous Javascript and XML, which is a cornerstone of how applications and websites communicate. Superagent will allow us to find city data with a minimum of effort.
+
+###Code in action
+This is a simple Node example for retrieving a dataset from the City of Sacramento Open Data Portal.
+```
+'use strict';
+const request = require('superagent');
+const baseUrl = 'http://api.data.cityofsacramento.org/';
+const path = 'api/v2/datastreams/';
+const dataset = 'SACRA-UCR-YEAR-TO-YEAR';
+const api_key = 'd3165bfcf022dc1af8f1c19909a86b43b0340a0c';
+request
+  .get(baseUrl + path + dataset + '/data.json/?auth_key=' + api_key + '&limit=1')
+  .end(function(err, res){
+    if(err )
+      console.log('Error', err);
+    console.log(res.text);
+  });
+```
