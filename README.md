@@ -32,3 +32,4 @@ request
     console.log(res.text);
   });
 ```
+To run this, type ```npm start``` into your Terminal (Mac, Linux) or Command Prompt (Windows)
